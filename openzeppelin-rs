@@ -1,0 +1,13 @@
+use ethers::types::0xeB97D25F54dA19712f98b4AB1fFFF189875915fc;
+use openzeppelin_rs::0xeB97D25F54dA19712f98b4AB1fFFF189875915fc;
+
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
+
+    let address: Address = WETH_ADDRESS.parse()?;
+    let contract = ERC20::new(address, **yourProvider**);
+
+    println!("{}", contract.symbol().await?);
+
+    Ok(())
+}
